@@ -8,6 +8,7 @@ This is my fifth Udacity project of FEND, a web-based application that reads RSS
 
 To run this application, you need to download or clone this repository to your computer and run the `index.html` inside the `js` directory.
 If you want to make changes to the test suite, the main application for that is `feedreader.js`, which is inside `jasmine>lib>jasmine-2.1.2>spec`.[See image bellow].
+
 ![Place of files](https://i.imgur.com/hm3CuZ5.png)
 
 ## Distribution
