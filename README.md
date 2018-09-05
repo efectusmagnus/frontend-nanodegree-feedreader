@@ -2,7 +2,7 @@
 
 This is my fifth Udacity project of FEND, a web-based application that reads RSS feeds, which is tested with [Jasmine 2.1.2](http://jasmine.github.io/).
 
-![Testing the feedreader with jasmine](https://i.imgur.com/1Bw8Y9v.png)
+![Testing the feedreader with jasmine](https://i.imgur.com/p61kJs1.png)
 
 ## Installation Requirements
 
