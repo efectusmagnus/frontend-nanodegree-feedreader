@@ -75,28 +75,40 @@ $(function() {
     });
     /* DONE: Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
-        /* DONE: Write a test that ensures when the loadFeed
-         * function is called and completes its work, there is at least
-         * a single .entry element within the .feed container.
-         * Remember, loadFeed() is asynchronous so this test will require
-         * the use of Jasmine's beforeEach and asynchronous done() function.
-         */
-         beforeEach(function(done) {
-           setTimeout(function() {
-             init();
-             done();
-           }, 2000);
-         });
-         it('has at least a single entry element within the feed container', function(done) {
-           expect($('.feed').find('.entry').length).toBeGreaterThan(0);
+      /* DONE: Write a test that ensures when the loadFeed
+       * function is called and completes its work, there is at least
+       * a single .entry element within the .feed container.
+       * Remember, loadFeed() is asynchronous so this test will require
+       * the use of Jasmine's beforeEach and asynchronous done() function.
+       */
+       beforeEach(function(done) {
+         setTimeout(function() {
+           init();
            done();
-         });
+         }, 2000);
+       });
+       it('has at least a single entry element within the feed container', function(done) {
+         expect($('.feed').find('.entry').length).toBeGreaterThan(0);
+         done();
+       });
     });
     /* DONE: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
-        /* TODO: Write a test that ensures when a new feed is loaded
+        /* DONE: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+         beforeEach(function(done) {
+         loadFeed(0, function() {
+           done();
+         });
+       });
+       it('changes its content when a new feed is loaded', function(done) {
+         const bFeed = $('.header-title');/*`bFeed = before feed`*/
+         loadFeed(1);
+         const aFeed = $('.header-title');
+         expect(bFeed).not.toBe(aFeed);/*`aFeed = after feed`*/
+         done();
+       });
     });
 }());
