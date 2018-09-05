@@ -75,7 +75,7 @@ $(function() {
     });
     /* DONE: Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
-        /* TODO: Write a test that ensures when the loadFeed
+        /* DONE: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
@@ -85,7 +85,7 @@ $(function() {
            setTimeout(function() {
              init();
              done();
-           }, 1000);
+           }, 2000);
          });
          it('has at least a single entry element within the feed container', function(done) {
            expect($('.feed').find('.entry').length).toBeGreaterThan(0);
