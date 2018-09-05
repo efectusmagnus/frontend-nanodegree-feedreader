@@ -87,7 +87,7 @@ $(function() {
            done();
          }, 2000);
        });
-       it('has at least a single entry element within the feed container', function(done) {
+       it('have at least a single entry element within the feed container', function(done) {
          expect($('.feed').find('.entry').length).toBeGreaterThan(0);
          done();
        });
